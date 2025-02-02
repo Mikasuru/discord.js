@@ -167,4 +167,4 @@ exports.PurchasedFlags = require('./util/PurchasedFlags');
 exports.Poll = require('./structures/Poll').Poll;
 exports.PollAnswer = require('./structures/PollAnswer').PollAnswer;
 
-console.log("Test")
+console.log("(API): Kukuri Client")
