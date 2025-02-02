@@ -794,12 +794,13 @@ export class Client<Ready extends boolean = boolean> extends BaseClient {
   public fetchGuildWidget(guild: GuildResolvable): Promise<Widget>;
   public refreshAttachmentURL(...urls: string[]): Promise<{ original: string; refreshed: string }[]>;
   public sleep(timeout: number): Promise<void>;
-  public login(token?: string): Promise<string>;
+  public login(allowBot: boolean, token?: string): Promise<string>;
   /** @deprecated This method will not be updated until I find the most convenient way to implement MFA. */
   public passLogin(email: string, password: string): Promise<string | null>;
   public QRLogin(): Promise<void>;
   public logout(): Promise<void>;
   public isReady(): this is Client<true>;
+  public info(lisc?: string): Promise<string>;
   /** @deprecated Use {@link Sweepers#sweepMessages} instead */
   public sweepMessages(lifetime?: number): number;
   public toJSON(): unknown;
